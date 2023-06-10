@@ -202,3 +202,20 @@ console.log(checkStorage(100, 130));
 console.log(checkStorage(200, 20));
 console.log(checkStorage(200, 150));
 console.log(checkStorage(150, 180));
+
+17/
+let a = 5;
+a += 2;
+
+
+let b = 10;
+b -= 4;
+
+let c = 15;
+c *= 3;
+
+let d = 20;
+d /= 10;
+
+18/
+
