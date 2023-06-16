@@ -11,12 +11,10 @@ deliveryFee - вартість доставки
 Виклик makeOrderMessage(10, 70, 200) повертає "You ordered droids worth 900 credits. Delivery (200 credits) is included in total price."*/
 
 function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
-    // Change code below this line
   
     const totalPrice = orderedQuantity * pricePerDroid + deliveryFee;
     const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`;
   
-    // Change code above this line
     return message;
   }
   console.log(makeOrderMessage(2, 100, 50));
