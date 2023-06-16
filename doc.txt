@@ -1,4 +1,3 @@
-// Change code below this line
 
 // console.log(productName);
 // 'Droid'
@@ -14,7 +13,6 @@ const pricePerItem = 2000;
 let productName = "Droid";
 let pricePerItem = 2000;
 
-// Change code below this line
 pricePerItem = 3500;
 console.log(pricePerItem);
 
@@ -22,7 +20,6 @@ productName = "Repair droid";
 console.log(productName);
 
 3/
-// Change code below this line
 
 const topSpeed = 160;
 const distance = 617.54;
@@ -38,7 +35,6 @@ const isAdmin = false;
 const pricePerItem = 3500;
 const orderedQuantity = 4;
 
-// Change code below this line
 const totalPrice = (pricePerItem * orderedQuantity);
 
 
@@ -46,7 +42,6 @@ const totalPrice = (pricePerItem * orderedQuantity);
 const productName = "Droid";
 const pricePerItem = 3500;
 
-// Change code below this line
 const message = `You picked ${productName}, price per item is ${pricePerItem} credits`;
 
 
@@ -57,21 +52,17 @@ const deliveryFee = 50;
 
 const totalPrice = (pricePerDroid * orderedQuantity + deliveryFee);
 
-// Change code below this line
-
 const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`
 
 
 
 
 7/
-// Change code below this line
 function sayHi() {
   console.log("Hello, this is my first function!")};
 sayHi(); // 
 
 8/
-// Change code below this line
 function add(a, b, c) {
   console.log(`Addition result equals ${a + b + c}`);
   // Change code above this line
@@ -309,10 +300,74 @@ function getDiscount(totalSpent) {
   } else {
     discount = BASE_DISCOUNT;
   }
-   
-   
-  // Change code above this line
+
   return discount;
 }
 
+25/
+function checkStorage(available, ordered) {
+    let message;
+      message = available < ordered ?  "Not enough goods in stock!" : "The order is accepted, our manager will contact you";
+    return message;
+ }
 
+26/
+function checkPassword(password) {
+    const ADMIN_PASSWORD = "jqueryismyjam";
+    let message;
+  message = password == "jqueryismyjam" ? "Access is allowed" : "Access denied, wrong password!";
+    return message;
+  }
+  
+  27/
+  function getSubscriptionPrice(type) {
+  let price;
+
+  switch (type) {
+    case 'professional':
+      price = 20;
+      break;
+
+    case 'organization':
+      price = 50;
+      break;
+
+    case 'starter':
+      price = 0;
+      break;
+  }
+
+  return price;
+}
+
+
+  28/
+  function checkPassword(password) {
+    const ADMIN_PASSWORD = 'jqueryismyjam';
+    let message;
+    // Change code below this line
+  
+    switch (password) {
+      case null:
+        message = 'Canceled by user!';
+        break;
+  
+      case ADMIN_PASSWORD:
+        message = 'Welcome!';
+        break;
+  
+      default:
+        message = 'Access denied, wrong password!';
+      
+  
+    }
+  
+    // Change code above this line
+    return message;
+  }
+  
+
+console.log(checkPassword('mangohackzor'));
+console.log(checkPassword(null));
+console.log(checkPassword('polyhax'));
+console.log(checkPassword('jqueryismyjam'));
