@@ -409,3 +409,15 @@ console.log(getShippingCost('China'));
 console.log(getShippingCost('Chile'));
 console.log(getShippingCost('Jamaica'));
 console.log(getShippingCost('Sweden'));
+
+30/
+function getNameLength(name) {
+  const message = `Name ${name} is ${name.length} characters long`;
+
+  return message;
+}
+
+console.log(getNameLength('Poly'));
+console.log(getNameLength('Harambe'));
+console.log(getNameLength('Billy'));
+console.log(getNameLength('Joe'));
