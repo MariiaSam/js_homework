@@ -11,3 +11,44 @@
 Виклик функції checkForSpam("Get rid of sPaM emails. Our book in on sale!") повертає true
 Виклик функції checkForSpam("[SPAM] How to earn fast money?") повертає true?*/
 
+function checkForSpam(message) {
+    let result;
+  const normalizedMessage = message.toLowerCase();
+    result = normalizedMessage.includes('spam') || normalizedMessage.includes('sale');
+    
+    return result;
+  }
+
+//   Логічний оператор || або, Логічні оператори
+//   У JavaScript є три логічні оператори:
+//   && (І)
+//   || (АБО)
+//   ! (НЕ)
+//   &&
+//   && логічний оператор І (AND).
+  
+//   Повертає true якщо два значення рівні true, інакше повертає false.
+  
+//   При порівняні:
+//   true && true дає true
+//   true && false дає false
+//   false && true дає false
+//   false && false дає false
+//   var a = true, b = false;
+//   alert( a && b ); //false
+//   console.log( true && true); //true
+//   console.log( false && true); //false
+//   console.log( false && false); //false
+//   console.log( true && true && true ); //true
+//   console.log( true && true && false ); //false
+  
+//   ||
+//   || логічний оператор АБО (OR).
+  
+//   Повертає true якщо одне значення рівне true, інакше повертає false.
+  
+//   При порівняні:
+//   true || true дає true
+//   true || false дає true
+//   false || true дає true
+//   false || false дає false
