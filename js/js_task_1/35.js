@@ -18,7 +18,13 @@ function checkForName(fullName, name) {
     const result = fullName.includes(name); 
      return result;
    }
-   
+      console.log(checkForName("Egor Kolbasov", "Egor"));
+      console.log(checkForName("Egor Kolbasov", "egor"));
+      console.log(checkForName("Egor Kolbasov", "eg0r"));
+      console.log(checkForName("Egor Kolbasov", "Zhenya"));
+      console.log(checkForName("Egor Kolbasov", "Vadim"));
+      console.log(checkForName("Egor Kolbasov", "vadim"));
+      console.log(checkForName("Egor Kolbasov", "Dima"));
 
 /*Метод рядків includes(substring) перевіряє, чи входить підрядок substring у рядок, повертає буль - true, якщо входить, і false - в іншому випадку. Регістр символів в рядку і підрядку має значення, оскільки, наприклад літера "a" не дорівнює літері "А".
 

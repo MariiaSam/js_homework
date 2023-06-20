@@ -23,3 +23,8 @@ function checkPassword(password) {
   
     return message;
   }
+
+    console.log(checkPassword("mangohackzor"));
+    console.log(checkPassword(null));
+    console.log(checkPassword("polyhax"));
+    console.log(checkPassword("jqueryismyjam"));

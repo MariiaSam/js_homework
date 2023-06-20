@@ -20,7 +20,6 @@ function formatMessage(message, maxLength) {
   } else {
     return message.substring(0, maxLength) + '...';
   }
-  return result;
 }
 
 

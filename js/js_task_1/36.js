@@ -19,6 +19,11 @@ function checkForSpam(message) {
     return result;
   }
 
+    console.log(checkIfCanAccessContent("pro"));
+    console.log(checkIfCanAccessContent("starter"));
+    console.log(checkIfCanAccessContent("vip"));
+    console.log(checkIfCanAccessContent("free"));
+
 //   Логічний оператор || або, Логічні оператори
 //   У JavaScript є три логічні оператори:
 //   && (І)

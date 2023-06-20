@@ -28,4 +28,11 @@ function checkStorage(available, ordered) {
     // Change code above this line
     return message;
   }
+
+    console.log(checkStorage(100, 50));
+    console.log(checkStorage(100, 130));
+    console.log(checkStorage(70, 0));
+    console.log(checkStorage(200, 20));
+    console.log(checkStorage(200, 250));
+    console.log(checkStorage(150, 0));
   

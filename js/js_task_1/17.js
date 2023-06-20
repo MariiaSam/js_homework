@@ -21,3 +21,8 @@ c *= 3;
 
 let d = 20;
 d /= 10;
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
