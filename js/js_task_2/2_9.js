@@ -11,6 +11,6 @@ function getExtremeElements(array) {
     
     }
 
-   console.log(getExtremeElements([1, 2, 3, 4, 5]));
-   console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
-   console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+    console.log(getExtremeElements([1, 2, 3, 4, 5]));
+    console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+    console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
