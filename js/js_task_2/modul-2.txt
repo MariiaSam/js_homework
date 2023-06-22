@@ -121,3 +121,16 @@ console.log(
 );
 console.log(makeStringFromArray(['M', 'a', 'n', 'g', 'o'], ''));
 console.log(makeStringFromArray(['top', 'picks', 'for', 'you'], '_'));
+
+
+13.
+function slugify(title) {
+  const slug = title.toLowerCase().split(' ').join('-');
+
+  return slug;
+}
+
+console.log(slugify('Arrays for begginers'));
+console.log(slugify('English for developer'));
+console.log(slugify('Ten secrets of JavaScript'));
+console.log(slugify('How to become a JUNIOR developer in TWO WEEKS'));
