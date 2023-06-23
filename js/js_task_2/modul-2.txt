@@ -134,3 +134,16 @@ console.log(slugify('Arrays for begginers'));
 console.log(slugify('English for developer'));
 console.log(slugify('Ten secrets of JavaScript'));
 console.log(slugify('How to become a JUNIOR developer in TWO WEEKS'));
+
+
+16/
+function makeArray(firstArray, secondArray, maxLength) {
+    // Change code below this line
+
+let message = firstArray.concat(secondArray);
+  if (message.length > maxLength) {
+message = message.slice(0, maxLength);
+  }
+
+return message;
+}
