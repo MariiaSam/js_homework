@@ -240,6 +240,114 @@ function checkFruit(fruit) {
 
   return fruits.includes(fruit);
 }
-      
-      
+
+25/
+function getCommonElements(array1, array2) {
+  
+    const newArray = [];
+    for (let i = 0; i < array1.length; i += 1) {
+        if(array2.includes(array1[i])){
+      newArray.push(array1[i]) }
+    }
+    return newArray;
+}
+  
+  26/
+
+
+function calculateTotalPrice(order) {
+    let total = 0;
+    // Change code below this line
+  
+    for (const sum of order) {
+      total += sum;
+    }
+  
+    // Change code above this line
+    return total;
+  }
+  
+  console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+      27/
+      function filterArray(numbers, value) {
+    // Change code below this line
+    const filteredNumbers = [];
+  
+    for (const number of numbers) {
+      if (number > value){
+        filteredNumbers.push(number);
+      }
+    }
+  
+    return filteredNumbers;
+  }
+    console.log(filterArray([1, 2, 3, 4, 5], 3))
+  
+  
+28/
+const a = 3 % 3;
+const b = 4 % 3;
+const c = 11 % 4;
+const d = 12 % 7;
+const e = 8 % 6;
+
+29/
+function getEvenNumbers(start, end) {
+ 
+     const newArray = [];
+ 
+   for (let i = start; i <= end; i+= 1) {
+     if (i % 2 === 0){
+       newArray.push(i)
+     }
+   }
+   
+  return newArray;
+ 
+   }
+   
+   console.log(getEvenNumbers(2, 5));
+
+   30/
+   const start = 6;
+const end = 27;
+let number;
+
+for (let i = start; i < end; i += 1) {
+  if (i % 5 === 0) {
+    number = 10;
+    break
+  }
+  
+}
+
+31/
+function findNumber(start, end, divisor) {
+    // Change code below this line
+    let number;
+  
+    for (let i = start; i < end; i += 1) {
+      if (i % divisor === 0) {
+        return i;
+      }
+    }
+  
+  }
+  
+  32/
+  
+  function includes(array, value) {
+  for (let i = 0; i <= array.length; i += 1) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(calculateTotalPrice([1, 2, 3, 4, 5], 3));
+
+
+
   
