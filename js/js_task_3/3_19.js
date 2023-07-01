@@ -14,10 +14,14 @@ const products = [
   ];
   
   function getAllPropValues(propName) {
-    // Change code below this line
+  const values = [];
+    for (const product of products){
+      if (product.hasOwnProperty(propName))
+      {values.push(product[propName]);
+      }
+      }
   
-  
-  
-    // Change code above this line
+  return values;
+    
   }
   
