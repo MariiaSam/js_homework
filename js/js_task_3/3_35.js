@@ -37,3 +37,16 @@
 // console.log(bookShelf.getBooks()); // ["Останнє королівство", "Страж снів"]
 // Логічно замислитися - чому б не використовувати ім'я об'єкта у зверненні до властивостей, адже ми явно не збираємося його змінювати. Справа в тому, що ім'я об'єкта - річ ненадійна, методи одного об'єкта можна копіювати в інший (з іншим ім'ям), а в майбутньому дізнаємось, що часто під час створення об'єкта, ми наперед зовсім не знаємо імені. Використання this гарантує, що метод працює саме з тим об'єктом, який його викликав.
 
+const bookShelf = {
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  updateBook(oldName, newName) {
+    // Change code below this line
+
+const bookIndex = this.books.indexOf(oldName);
+if (bookIndex !== -1) {
+      this.books.splice(bookIndex, 1, newName);
+    }
+
+    // Change code above this line
+  },
+};

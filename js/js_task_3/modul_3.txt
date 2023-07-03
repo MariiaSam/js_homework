@@ -520,5 +520,84 @@ removeBook(bookName) {
 };
 
 35/
+const bookShelf = {
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  updateBook(oldName, newName) {
+    // Change code below this line
+
+const bookIndex = this.books.indexOf(oldName);
+if (bookIndex !== -1) {
+      this.books.splice(bookIndex, 1, newName);
+    }
+
+    // Change code above this line
+  },
+};
 
 
+36/
+const atTheOldToad = {
+  // Change code below this line
+
+potions: [],
+
+  // Change code above this line
+};
+
+37/
+const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  // Change code below this line
+getPotions() { 
+    return this.potions;
+  }
+  // Change code above this line
+};
+
+
+38/
+const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  addPotion(potionName) {
+    // Change code below this line
+  this.potions.push(potionName);
+
+
+    // Change code above this line
+  },
+};
+
+39/
+const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  removePotion(potionName) {
+    // Change code below this line
+
+     const index = this.potions.indexOf(potionName);
+    if (index !== -1) {
+      this.potions.splice(index, 1);
+    }
+
+
+    // Change code above this line
+  },
+};
+
+
+40/const atTheOldToad = {
+    potions: ["Speed potion", "Dragon breath", "Stone skin"],
+    updatePotionName(oldName, newName) {
+      // Change code below this line
+     const indexPotions = this.potions.indexOf(oldName);
+        if (indexPotions !== -1) {
+          this.potions[indexPotions] = newName;
+        }
+    
+  
+      // Change code above this line
+    },
+  };
+  
+
+  41/
+  
