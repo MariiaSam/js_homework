@@ -522,4 +522,103 @@ console.log(authorsInAlphabetOrder);
 console.log(authorsInReversedOrder);
 
 41/
+const books = [
+    {
+      title: "The Last Kingdom",
+      author: "Bernard Cornwell",
+      rating: 8.38,
+    },
+    {
+      title: "Beside Still Waters",
+      author: "Robert Sheckley",
+      rating: 8.51,
+    },
+    {
+      title: "The Dream of a Ridiculous Man",
+      author: "Fyodor Dostoevsky",
+      rating: 7.75,
+    },
+    { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+    { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+  ];
+  // Change code below this line
+  
+  const sortedByAuthorName = [...books].sort((a, b) => a.author.localeCompare(b.author));
+  
+  const sortedByReversedAuthorName = [...books].sort((a, b) => b.author.localeCompare(a.author))
+  
+  const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating); ;
+  
+  const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating); 
+
+  42/
+  const sortByAscendingBalance = users => {
+    const totalBalance = [...users].sort((a, b) => a.balance - b.balance);
+     return totalBalance;
+ };
+ // Change code above this line
+
+ 43.
+ const sortByDescendingFriendCount = users =>
+  users.slice().sort((a, b) => b.friends.length - a.friends.length);
+
+  44.
+  // Change code below this line
+const sortByName = users => {
+return users.slice().sort((a, b) => a.name.localeCompare(b.name));
+};
+// Change code above this line
+
+45/
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  {
+    title: "The Dreams in the Witch House",
+    author: "Howard Lovecraft",
+    rating: 8.67,
+  },
+];
+const MIN_BOOK_RATING = 8;
+// Change code below this line
+
+const names = books
+  .filter((book) => book.rating > MIN_BOOK_RATING)
+  .map((book) => book.author)
+  .sort((a, b) => a.localeCompare(b));
+
+  46/
+  
+const getNamesSortedByFriendCount = users => {return users.slice().sort((a, b) => a.friends.length - b.friends.length)
+ .map((user) => user.name);
+};
+
+47/
+const getSortedFriends = users => {
+   const newFriends = users
+    .flatMap((user) => user.friends)
+    .filter((friend, index, array) => array.indexOf(friend) === index)
+    .sort((a, b) => a.localeCompare(b));
+
+  return newFriends;
+};
+  
+
+
+
+
 
