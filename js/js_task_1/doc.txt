@@ -465,4 +465,15 @@ function checkForName(fullName, name) {
    }
    
    36/
-  
+  function checkForSpam(message) {
+    let result;
+  const normalizedMessage = message.toLowerCase();
+    result = normalizedMessage.includes('spam') || normalizedMessage.includes('sale');
+    
+    return result;
+  }
+
+    console.log(checkIfCanAccessContent("pro"));
+    console.log(checkIfCanAccessContent("starter"));
+    console.log(checkIfCanAccessContent("vip"));
+    console.log(checkIfCanAccessContent("free"));
