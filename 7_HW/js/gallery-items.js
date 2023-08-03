@@ -63,3 +63,95 @@ export const galleryItems = [
     description: 'Lighthouse Coast Sea',
   },
 ];
+
+
+export const trainGallery = [
+  {
+    preview:
+    'https://w.forfun.com/fetch/e0/e089409226a3bf522c73fbeb0291d15f.jpeg?h=1200&r=0.5',
+    original:
+'https://w.forfun.com/fetch/e0/e089409226a3bf522c73fbeb0291d15f.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+{
+  preview:
+    'https://w.forfun.com/fetch/a3/a31ce7edf8e5a79350929ceba5cd399f.jpeg?h=1200&r=0.5',
+  original:
+    'https://w.forfun.com/fetch/a3/a31ce7edf8e5a79350929ceba5cd399f.jpeg',
+  description: 'Lighthouse Coast Sea',
+},
+{
+  preview:
+    'https://w.forfun.com/fetch/ba/ba35f150d730a7e689c727f8e46db31d.jpeg?h=1200&r=0.5',
+  original:
+    'https://w.forfun.com/fetch/ba/ba35f150d730a7e689c727f8e46db31d.jpeg',
+  description: 'Lighthouse Coast Sea',
+},
+{
+  preview:
+    'https://w.forfun.com/fetch/2d/2d5adca5cc436b57b95fa8f2b05e09cc.jpeg?h=1200&r=0.5',
+  original:
+    'https://w.forfun.com/fetch/2d/2d5adca5cc436b57b95fa8f2b05e09cc.jpeg',
+  description: 'Lighthouse Coast Sea',
+},
+{
+  preview:
+  'https://w.forfun.com/fetch/e0/e089409226a3bf522c73fbeb0291d15f.jpeg?h=1200&r=0.5',
+  original:
+'https://w.forfun.com/fetch/e0/e089409226a3bf522c73fbeb0291d15f.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+{
+preview:
+  'https://w.forfun.com/fetch/a3/a31ce7edf8e5a79350929ceba5cd399f.jpeg?h=1200&r=0.5',
+original:
+  'https://w.forfun.com/fetch/a3/a31ce7edf8e5a79350929ceba5cd399f.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+{
+preview:
+  'https://w.forfun.com/fetch/ba/ba35f150d730a7e689c727f8e46db31d.jpeg?h=1200&r=0.5',
+original:
+  'https://w.forfun.com/fetch/ba/ba35f150d730a7e689c727f8e46db31d.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+{
+preview:
+  'https://w.forfun.com/fetch/2d/2d5adca5cc436b57b95fa8f2b05e09cc.jpeg?h=1200&r=0.5',
+original:
+  'https://w.forfun.com/fetch/2d/2d5adca5cc436b57b95fa8f2b05e09cc.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+
+{
+  preview:
+  'https://w.forfun.com/fetch/e0/e089409226a3bf522c73fbeb0291d15f.jpeg?h=1200&r=0.5',
+  original:
+'https://w.forfun.com/fetch/e0/e089409226a3bf522c73fbeb0291d15f.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+{
+preview:
+  'https://w.forfun.com/fetch/a3/a31ce7edf8e5a79350929ceba5cd399f.jpeg?h=1200&r=0.5',
+original:
+  'https://w.forfun.com/fetch/a3/a31ce7edf8e5a79350929ceba5cd399f.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+{
+preview:
+  'https://w.forfun.com/fetch/ba/ba35f150d730a7e689c727f8e46db31d.jpeg?h=1200&r=0.5',
+original:
+  'https://w.forfun.com/fetch/ba/ba35f150d730a7e689c727f8e46db31d.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+{
+preview:
+  'https://w.forfun.com/fetch/2d/2d5adca5cc436b57b95fa8f2b05e09cc.jpeg?h=1200&r=0.5',
+original:
+  'https://w.forfun.com/fetch/2d/2d5adca5cc436b57b95fa8f2b05e09cc.jpeg',
+description: 'Lighthouse Coast Sea',
+},
+
+
+];
+
