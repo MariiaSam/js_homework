@@ -65,7 +65,7 @@ export const galleryItems = [
 ];
 
 
-export const trainGallery = [
+ const trainGallery = [
   {
     preview:
     'https://w.forfun.com/fetch/e0/e089409226a3bf522c73fbeb0291d15f.jpeg?h=1200&r=0.5',
