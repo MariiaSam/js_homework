@@ -2,6 +2,16 @@
 // ********************ЦИКЛИ******************** 2 ЗАНЯТТЯ
 
 
+// ++++++++++++++++++ТЕРНАРНИЙ ОПЕРАТОР++++++++++++++++++ 
+
+const value = 12;
+
+let mess;
+
+mess = value > 15 && value < 20 ? 'в діапазоні від 15 до 20' : 'спробуйте ще';
+console.log(mess)
+
+
 // ++++++++++++++++++FOR++++++++++++++++++ 
 
 // const mess = "hello world"
@@ -70,7 +80,7 @@
 // }
 // console.log(action);
 
-// Золоте правило -перевіряємо в НИЖНЬОМУ РЕГІСТРІ!!!
+// Золоте правило - перевіряємо в НИЖНЬОМУ РЕГІСТРІ!!!
 
 
 // Task - 2
@@ -158,5 +168,165 @@
 
 
 // ********************ARRAY******************** 3 ЗАНЯТТЯ
+// const array = ["Hello world", null, true, 15];
+
+// console.log(array.length);
+// console.log(typeof 1);
+// console.log(typeof 'hello');
+// console.log(typeof array); // object
+// console.log(Array.isArray(array)); // true
+// console.log(Array.isArray({})); // false
 
 
+// // Перебір масиву
+// const array = ["Hello world", null, true, 15];
+
+// // Цикл for
+// for (let i = 0; i < array.length; i+=1){
+//     let item = array[i]
+
+//     if(array[i] === null){
+//         array[i] = 'I love JS'
+//     }
+//     console.log(item);
+// }
+
+// console.log(array);
+
+// ++++++++++++++++++ЗАДАЧІ З ЛЕКЦІЇ РИСІЧА TOPIC ARRAY++++++++++++++++++ 
+
+// Task-1
+// Напиши скрипт який буде перебирати масив та видаляти з нього (мутувати) всі елементи що не є типом даних Number.
+
+// const arr = [3, "Hello", null, 42, false];
+
+// Приклад - 1
+// for (let i = 0; i < arr.length; i += 1) {
+//   if (typeof arr[i] !== "number") {
+//     arr.splice(i, 1);
+//     i -= 1;
+//   }
+// }
+// console.log(arr);
+
+// Приклад - 2
+// const arr = [3, "Hello", null, 42, false];
+// for(let i = arr.length -1; i >= 0; i-=1){
+//   if (typeof arr[i] !== "number") {
+//     arr.splice(i, 1);
+//   }
+// }
+// console.log(arr);
+
+//========================Taska==============
+// Створи функцію, яка буде перевіряти чи кожен елемент масиву більш ніж вказане значення. Функція приймає два параметри .
+// 1 - масив чисел
+// 2 - число, яке потрібно порівнювати з усіма елементами масиву.
+// функція, яка повертає повідомленя про успішну або неуспішну перевірку (Success, Fail)
+
+// const numbers = [25, 12, 67, 40, 18]
+
+// function checkValue (arr, targetValue) {
+//     let mess = 'Success';
+    
+//     for (const value of arr){
+//     if (value <= targetValue) {
+//     mess = "Fail"
+//         }
+//     }
+// return mess
+// }
+
+// console.log(checkValue (numbers, 10))
+// console.log(checkValue (numbers, 16))
+
+//========================Taska 2==============
+//Створи функцію, яка буде розбивати початковий масив на потрібну кількість елементів розділяючи а декілька масивів.
+// Параметри, 
+// 1 - масив значень
+// 2 - потрібну кількість елементів в масиві
+// Функція повертає масив елементів
+
+// const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// function getCombination(arr, count) {
+//     const result = [];
+
+//     for (let i = 0; i < arr.length; i+= count) {
+//         const combination = arr.slice(i, i + count)
+//         result.push(combination)
+//     }
+// }
+
+// console.log(getCombination(data, 3))
+// console.log(getCombination(data, 2))
+
+
+//========================Taska 3==============
+
+// Напиши функцію getReactArea(dimensions) для обчислення площі прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядкаю Значення гарантовано розділені пробілом.
+
+// function getReactArea(dimensions) {
+// const values = dimensions.split(' ')
+// console.log(values)
+// const firstValue = Number(values[0])
+// const secondValue = Number(values[1])
+
+// return firstValue * secondValue
+// }
+
+// console.log(getReactArea('8 11'))
+// console.log(getReactArea('15 11'))
+
+
+//========================Taska 4==============
+
+// Напишіть функції для роботи з колекцією навчальних курсів
+
+// addCourse (name) - додає курс до кінця колекції
+// removeCourse(name)- видаляє курс із колекції
+// updateCourse(name)- змінює ім я на нове
+
+// const courses = ['HTML', "NestJs", 'CSS', "JS", "React", "PostgreSQL"]
+
+// function addCourse(name) {
+// if(courses.includes(name)){
+// alert ("Ви вже маєте такий курс")
+// } else {
+//     courses.push(name)
+// }
+    
+// }
+
+// addCourse("Express")
+// addCourse("CSS")
+
+// function removeCourse(name) {
+//     const idx = courses.indexOf(name) // якщо не знайшов, то повертає -1
+
+//     if (idx === -1){
+//         return 'курс з таким ім ям не знайдено'
+//     } 
+//     courses.splice(idx, 1)
+// }
+
+
+
+// const courses = ['HTML', "NestJs", 'CSS', "JS", "React", "PostgreSQL"]
+// function updateCourse(oldName, newName) {
+// const idx = courses.indexOf(oldName)
+// const inCourses = courses.includes(newName)
+
+// if(idx !== -1 &&  !inCourses){
+//     // courses.splice(idx, 1, newName) 
+// courses[idx] =  newName
+// } else if(inCourses){
+//     return "Ви вже вивчаєте такий курс"
+
+// } else{
+// return "курс з таким ім ям не знайдено"
+// }
+
+// }
+
+// updateCourse('HTML', "NestJs")
