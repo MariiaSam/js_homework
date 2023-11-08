@@ -4,12 +4,12 @@
 
 // ++++++++++++++++++ТЕРНАРНИЙ ОПЕРАТОР++++++++++++++++++ 
 
-const value = 12;
+// const value = 12;
 
-let mess;
+// let mess;
 
-mess = value > 15 && value < 20 ? 'в діапазоні від 15 до 20' : 'спробуйте ще';
-console.log(mess)
+// mess = value > 15 && value < 20 ? 'в діапазоні від 15 до 20' : 'спробуйте ще';
+// console.log(mess)
 
 
 // ++++++++++++++++++FOR++++++++++++++++++ 
@@ -167,7 +167,7 @@ console.log(mess)
 
 
 
-// ********************ARRAY******************** 3 ЗАНЯТТЯ
+// ********************FUNCTION******************** 4 ЗАНЯТТЯ
 // const array = ["Hello world", null, true, 15];
 
 // console.log(array.length);
@@ -330,3 +330,418 @@ console.log(mess)
 // }
 
 // updateCourse('HTML', "NestJs")
+
+
+// ********************ARRAY******************** 3 ЗАНЯТТЯ
+
+// Task-1
+// Напиши скрипт який буде перебирати масив та видаляти з нього (мутувати) всі елементи що не є типом даних Number.
+
+//var - 1
+// const arr = [3, "Hello", null, 42, false];
+
+// for (let i = 0; i < arr.length; i+= 1) { 
+//     if (typeof arr[i] !== "number"){
+//     arr.splice(i, 1)
+//     i -=1
+//     } 
+//  }
+//  console.log(arr)
+
+ //var - 2
+
+// for (let i = arr.length -1; i >= 0; i-= 1) {
+//     if (typeof arr[i] !== "number"){
+//             arr.splice(i, 1)    }
+// }
+
+//  console.log(arr)
+
+//=============================
+
+ // Task-2
+// Потрібно створити функцію яка буде приймати 1 параметр
+// Функція повина відібрати з масиву тільки ті елементи що дублюються в ньому та повернути їх в вигляді нового масиву як результат виконання функції
+
+// function getCommonElements(arr) {
+//     const result = []
+//      for (let i = 0; i < arr.length; i+= 1) {
+//         if (arr.includes(arr[i], i +1))  {
+//             if(!result.includes(arr[i])) {
+//                  result.push(arr[i])
+// }
+ 
+//         }      
+//      }
+// return result
+//  }
+
+// // console.log(getCommonElements([1, 2, 3, 2, 1, 1, 1, 1, 17, 19]));
+
+// // Task-3
+// //Потрібно створити функцію яка буде приймати 2 параметри
+// //1 параметр це масив всіх юзерів
+// //2 параметр це масив з чоловічими іменами.
+// //Функція повина відібрати з масиву всіх юзерів лише жіночі імена та повернути їх в результаті свого виканання.
+
+// const users = [
+//     "Artem",
+//     "Anna",
+//     "Larisa",
+//     "Maksim",
+//     "Svetlana",
+//     "David",
+//     "Roman",
+//     "Olga",
+//   ];
+
+//   const men = [ "Artem",
+//   "Maksim",
+//   "David",
+//   "Roman"]
+
+//   function getWomen(users, men) {
+//     const women = [];
+     
+//     for (const user of users ){
+//     if(!men.includes(user)) {
+//          women.push(user)
+//     } 
+//     }
+//     return women
+     
+//   }
+// console.log(getWomen(users, men));
+
+
+  
+  // Task-4 - Масиви та рядки
+// Напиши скрипт, який «розгортає» рядок (зворотний порядок літер) і виводить його в консоль.
+
+// const string = 'Welcome to the future';
+// const SEPARATOR = ''
+// const result = string.split(SEPARATOR).reverse().join(SEPARATOR)
+// console.log(result)
+
+
+// Task-5
+// Напиши скрипт який буде перевіряти чи елементи в масиві розташовані в порядку зростання,
+// якщо ні, то замінювати елементи на вірнi
+
+// const numbers = [1, 2, 3, 1, 5, 6, 1, 1, 9];
+// for (let i = 1; i < numbers.length; i+= 1) {
+//     const currentElement = numbers[i];
+//     const prevElement = numbers[i-1]; //від поточного взяти попереднє 
+    
+//     // if (currentElement - prevElement !==1) {
+//     //     numbers[i] = prevElement + 1
+//     // }
+
+//     if(currentElement <= prevElement){
+//     numbers[i] = prevElement + 1;
+//     }
+// }
+
+// console.log(numbers)
+
+
+// Task-6
+// Напиши функцію яка на основі масиву користувачів що поставили лайк формує та повертає рядок.
+// Функцію має повернути текст, як вказано у прикладах:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+
+// function createStr(arr) {
+
+//     let result = '';
+//     switch (arr.length) {
+//         case 0:
+//             result = "no one likes this"
+//             break;
+
+//             case 1:
+//             result = `${arr[0]} likes this`
+//             break;
+
+//             case 2:
+//             result = `${arr[0]} and ${arr[1]} like this`
+//             break;
+
+//             case 3:
+//             result = `${arr[0]}, ${arr[1]} and ${arr[2]} like this`
+//             break;
+     
+//         default:
+//             result = `${arr[0]}, ${arr[1]} and ${arr.length - 2} 2 others like this`;
+//     }
+//     return result;
+// }
+
+// console.log(createStr([]));
+// console.log(createStr(["Peter"]));
+// console.log(createStr(["Jacob", "Alex"]));
+// console.log(createStr(["Max", "John", "Mark"]));
+// console.log(createStr(["Mark", "Alex", "Jacob", "Mark"]));   
+
+
+// ********************OBJECT******************** 3 ЗАНЯТТЯ
+
+// Task - 1
+// Створи функцію яка буде приймати 3 параметри та формувати об'єкт покупки
+// 1 Назва продукту
+// 2 Кількість одиниць
+// 3 Ціна за 1 одиницю товару
+// Функція має повертати сформований об'єкт з ключами name, price, quantity, totalPrice.
+
+// function createBasket(product, quantity, price) {
+    // const totalPrice = quantity* price
+
+// const basket = {
+//     name: product,
+//     quantity,
+//     price,
+//     totalPrice: quantity* price,
+
+// }
+// return basket
+
+// return {
+//     name: product,
+//     quantity,
+//     price,
+//     totalPrice: quantity* price,
+
+// }
+
+// };
+
+// console.log(createBasket("pizza", 3, 120));
+// console.log(createBasket('aplle', 13, 1200));
+
+
+
+
+// Task - 2
+// Створи функцію для ведення статистики комп'ютерного клубу. Функція приймає 1 параметр це об'єкт користувачів де ключ це ім'я користувача, а значення це час оренди у хвилинах.
+// Функція повертає рядок з інформацією про те скільки було користувачів та який середній час оренди комп'ютер.
+
+// const players = {
+//   Den: 60,
+//   Kate: 130,
+//   William: 45,
+//   Matthew: 120,
+//   Ethan: 40,
+//   David: 55,
+// };
+
+// function getTime(obj) {
+
+    // const countPlayers = Object.keys(obj)?.length // ? - оператор безпечного ченінгу, ми не потрапимо в помилку
+    // const values = Object.values(obj)
+    // let totalTime = 0;
+    
+    // for (const value of values) {
+    //     totalTime += value;
+    // }
+    //   return `Count of players ${countPlayers}, average time ${totalTime /countPlayers }`
+
+//     const entries = Object.entries(obj)
+//     let totalTime = 0;
+//     for(const entry of entries) {
+//         totalTime += entry[1]
+//     }
+//           return `Count of players ${entries.length}, average time ${totalTime /entries.length}`
+
+//   }
+
+// console.log(getTime(players));
+
+
+
+// Task - 3
+// 1 Створити функцію яка буде приймати 2 параметри
+//    1 параметр масив
+//    2 параметр назва книги
+// Функція повертає Імена юзерів (формат стрінги) в яких є дана книга ("Harry Potter") \\\ "Anna, Oleksii"
+
+// 2 Порахувати вік всіх юзерів у яких є ключ age.
+
+// const friends = [
+//     { name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
+//     { name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
+//     { name: "Alice", books: ["War and peace", "Romeo and Juliet"], age: 0 },
+//     {
+//       name: "Oleksii",
+//       books: ["Bible", "War and peace", "Harry Potter", "Romeo and Juliet"],
+//       age: 26,
+//     },
+//   ];
+  
+//   function getUsers(arr, bookName) {
+//     // let users = '';
+//     const users = []
+//   for (const user of arr){
+//     if(user.books.includes(bookName)){
+//         // console.log(user.name)
+//         // users += `${user.name}, `
+//         users.push(user.name)
+//         }
+//     }
+//     console.log(users)
+//     return users.join(', ')
+
+//   }
+
+//   getUsers(friends, "Harry Potter")
+
+
+// function getTotalAge(arr) {
+//       let totalAge = 0;
+//       for (const user of arr) {
+//         //exp 1
+//         // if (user.age) { // 0
+//         //   totalAge += user.age;
+//         // }
+    
+//         // // exp 2
+//         // console.log(user.name, user.hasOwnProperty('age'));
+//         // if(user.hasOwnProperty('age')){
+//         //     totalAge += user.age;
+//         // }
+    
+//         // // exp 3
+//         // console.log(user.name, 'age' in user);
+//         // if ("age" in user) {
+//         //   totalAge += user.age;
+//         // }
+    
+//         // console.log(user);
+//       }
+//       return totalAge;
+//     }
+//     console.log(getTotalAge(friends));
+
+
+
+  // Task - 4
+  // 1 Створити метод об'єкту який буде приймати 1 параметр назву факультету та повертати списoк імен учнів факультету
+  // 2 Створити метод об'єкту який буде приймати 1 параметр назву факультету та повертати кількість очків факультету
+  
+  const hogvarts = {
+    griffindor: [
+      {
+        name: "Harry",
+        points: 17,
+      },
+      {
+        name: "Hermiona",
+        points: 19,
+      },
+      {
+        name: "Ron",
+        points: 14,
+      },
+    ],
+    slizerin: [
+      {
+        name: "Draco",
+        points: 17,
+      },
+      {
+        name: "Goyl",
+        points: 14,
+      },
+      {
+        name: "Crabbe",
+        points: 5,
+      },
+    ],
+
+    //======= 1=========
+    // getUserList(faculty){
+    //     if (!(faculty in this)){
+    //         return 'Not found'
+    //     }
+    //     const students = []
+
+    //     for (const student of this[faculty] ){
+    //         students.push(student.name)
+    //         }
+    //         return students.join(', ')
+    // }
+
+    // ========2 =========
+
+    getTotalPoints(faculty){
+        if (!this.hasOwnProperty(faculty)){
+                    return 'Not found'
+                }
+                let totalPoints = 0;
+                for (const student of this[faculty]){
+                    totalPoints += student.points
+                }
+                return totalPoints
+    }
+
+}
+
+    
+// console.log(hogvarts.getUserList("griffindor"));
+// console.log(hogvarts.getUserList("qwerty"));
+// console.log(hogvarts.getUserList("slizerin"));
+// console.log(hogvarts.getUserList('slitherin'));
+
+// console.log(hogvarts.getTotalPoints("griffindor"));
+// console.log(hogvarts.getTotalPoints("slizerin"));
+// console.log(hogvarts.getTotalPoints("slitherin"));
+
+    
+  
+  // console.log(hogvarts.getUserList("griffindor"));
+  // console.log(hogvarts.getUserList("qwerty"));
+  // console.log(hogvarts.getUserList("slizerin"));
+  // console.log(hogvarts.getUserList('slitherin'));
+  
+  // console.log(hogvarts.getTotalPoints("griffindor"));
+  // console.log(hogvarts.getTotalPoints("slizerin"));
+  // console.log(hogvarts.getTotalPoints("slitherin"));
+  
+  // function findLongestWord(string) {
+  //   // Change code below this line
+  //   const words = string.split(" ");
+  //   let longestWord = words[0];
+  //   const allWords = [];
+  
+  //   for (const word of words) {
+  //     if (word.length > longestWord.length) {
+  //       longestWord = word;
+  //     }
+  //   }
+  
+  //   for (const word of words) {
+  //     if (word.length === longestWord.length) {
+  //       allWords.push(word);
+  //     }
+  //   }
+  //   return allWords;
+  //   // Change code above this line
+  // }
+  
+  // console.log(findLongestWord("and Google do a HElllO roll WOORLD"));
+  
+  
+//   const a = {
+//       name: 'a'
+//   }
+  
+//   const b = a;
+//   console.log(b === a);
+  
+//   const c = Object.create(a)
+  
+  
+//   console.log(c === a);
