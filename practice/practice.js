@@ -1,8 +1,6 @@
-
 // ********************ЦИКЛИ******************** 2 ЗАНЯТТЯ
 
-
-// ++++++++++++++++++ТЕРНАРНИЙ ОПЕРАТОР++++++++++++++++++ 
+// ++++++++++++++++++ТЕРНАРНИЙ ОПЕРАТОР++++++++++++++++++
 
 // const value = 12;
 
@@ -11,8 +9,7 @@
 // mess = value > 15 && value < 20 ? 'в діапазоні від 15 до 20' : 'спробуйте ще';
 // console.log(mess)
 
-
-// ++++++++++++++++++FOR++++++++++++++++++ 
+// ++++++++++++++++++FOR++++++++++++++++++
 
 // const mess = "hello world"
 // for (let i = 0; i < mess.length; i+= 1 ){
@@ -21,7 +18,7 @@
 
 // пост-, пред- вираз i++
 
-// ++++++++++++++++++WHILE++++++++++++++++++ 
+// ++++++++++++++++++WHILE++++++++++++++++++
 // const mess = "hello world"
 // let i = 0;
 // while(i < mess.length) {
@@ -30,7 +27,7 @@
 // }
 // ітератори, генeратори - НОДА
 
-// ++++++++++++++++++DO WHILE++++++++++++++++++ 
+// ++++++++++++++++++DO WHILE++++++++++++++++++
 // let i = 0;
 // const mess = "hello world";
 
@@ -39,8 +36,7 @@
 // i += 1;
 // } while (i < mess.length)
 
-
-// ++++++++++++++++++ЗАДАЧІ З ЛЕКЦІЇ РИСІЧА++++++++++++++++++ 
+// ++++++++++++++++++ЗАДАЧІ З ЛЕКЦІЇ РИСІЧА++++++++++++++++++
 
 // Task - 1
 // Потрібно створити світлофор використовуючи конструкцію switch
@@ -82,7 +78,6 @@
 
 // Золоте правило - перевіряємо в НИЖНЬОМУ РЕГІСТРІ!!!
 
-
 // Task - 2
 // Потрібно створити застосунок для автоматизації перевірки правильних відповідей на дитячі загадки
 // Створи функцію яка буде приймати 2 параметри
@@ -91,7 +86,6 @@
 
 // Після виклику функції користувач має побачити питання на екрані та поле для вводу відповіді, використовуй propmt()
 // Функція має повертати булеве значення з результатом відповіді (true/false)
-
 
 // function check(text, answer){
 //     let mess = prompt(text)
@@ -102,7 +96,6 @@
 //  console.log(mess)
 //  return mess === answer // if we haven`t `RETURN`, function return - UNDEFINED
 // }
-
 
 // console.log(
 //   check("Хоч не літак, а крилатий, Без крил не може працювати.", "вітряк")
@@ -117,7 +110,6 @@
 // Через воду він проводить,
 // А сам з місця вік не сходить.
 // (Міст)
-
 
 // Task - 3
 // Потрібно створити функцію яка буде рахувати за скільки днів Равлик зможе виповзти з колодязя
@@ -155,7 +147,7 @@
 
 //  for (i = 0; i < str.length; i+= 1){
 //     if (vowels.includes(str[i])){
-//     counter += 1 
+//     counter += 1
 //        }
 //     }
 //     return counter
@@ -163,9 +155,6 @@
 
 // console.log(countVowel("HELLO WORLD")); // 3
 // console.log(countVowel("Junior Web Developer")); // 8
-
-
-
 
 // ********************FUNCTION******************** 4 ЗАНЯТТЯ
 // const array = ["Hello world", null, true, 15];
@@ -176,7 +165,6 @@
 // console.log(typeof array); // object
 // console.log(Array.isArray(array)); // true
 // console.log(Array.isArray({})); // false
-
 
 // // Перебір масиву
 // const array = ["Hello world", null, true, 15];
@@ -193,7 +181,7 @@
 
 // console.log(array);
 
-// ++++++++++++++++++ЗАДАЧІ З ЛЕКЦІЇ РИСІЧА TOPIC ARRAY++++++++++++++++++ 
+// ++++++++++++++++++ЗАДАЧІ З ЛЕКЦІЇ РИСІЧА TOPIC ARRAY++++++++++++++++++
 
 // Task-1
 // Напиши скрипт який буде перебирати масив та видаляти з нього (мутувати) всі елементи що не є типом даних Number.
@@ -228,7 +216,7 @@
 
 // function checkValue (arr, targetValue) {
 //     let mess = 'Success';
-    
+
 //     for (const value of arr){
 //     if (value <= targetValue) {
 //     mess = "Fail"
@@ -242,7 +230,7 @@
 
 //========================Taska 2==============
 //Створи функцію, яка буде розбивати початковий масив на потрібну кількість елементів розділяючи а декілька масивів.
-// Параметри, 
+// Параметри,
 // 1 - масив значень
 // 2 - потрібну кількість елементів в масиві
 // Функція повертає масив елементів
@@ -261,7 +249,6 @@
 // console.log(getCombination(data, 3))
 // console.log(getCombination(data, 2))
 
-
 //========================Taska 3==============
 
 // Напиши функцію getReactArea(dimensions) для обчислення площі прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядкаю Значення гарантовано розділені пробілом.
@@ -277,7 +264,6 @@
 
 // console.log(getReactArea('8 11'))
 // console.log(getReactArea('15 11'))
-
 
 //========================Taska 4==============
 
@@ -295,7 +281,7 @@
 // } else {
 //     courses.push(name)
 // }
-    
+
 // }
 
 // addCourse("Express")
@@ -306,11 +292,9 @@
 
 //     if (idx === -1){
 //         return 'курс з таким ім ям не знайдено'
-//     } 
+//     }
 //     courses.splice(idx, 1)
 // }
-
-
 
 // const courses = ['HTML', "NestJs", 'CSS', "JS", "React", "PostgreSQL"]
 // function updateCourse(oldName, newName) {
@@ -318,7 +302,7 @@
 // const inCourses = courses.includes(newName)
 
 // if(idx !== -1 &&  !inCourses){
-//     // courses.splice(idx, 1, newName) 
+//     // courses.splice(idx, 1, newName)
 // courses[idx] =  newName
 // } else if(inCourses){
 //     return "Ви вже вивчаєте такий курс"
@@ -331,7 +315,6 @@
 
 // updateCourse('HTML', "NestJs")
 
-
 // ********************ARRAY******************** 3 ЗАНЯТТЯ
 
 // Task-1
@@ -340,15 +323,15 @@
 //var - 1
 // const arr = [3, "Hello", null, 42, false];
 
-// for (let i = 0; i < arr.length; i+= 1) { 
+// for (let i = 0; i < arr.length; i+= 1) {
 //     if (typeof arr[i] !== "number"){
 //     arr.splice(i, 1)
 //     i -=1
-//     } 
+//     }
 //  }
 //  console.log(arr)
 
- //var - 2
+//var - 2
 
 // for (let i = arr.length -1; i >= 0; i-= 1) {
 //     if (typeof arr[i] !== "number"){
@@ -359,7 +342,7 @@
 
 //=============================
 
- // Task-2
+// Task-2
 // Потрібно створити функцію яка буде приймати 1 параметр
 // Функція повина відібрати з масиву тільки ті елементи що дублюються в ньому та повернути їх в вигляді нового масиву як результат виконання функції
 
@@ -370,8 +353,8 @@
 //             if(!result.includes(arr[i])) {
 //                  result.push(arr[i])
 // }
- 
-//         }      
+
+//         }
 //      }
 // return result
 //  }
@@ -402,27 +385,24 @@
 
 //   function getWomen(users, men) {
 //     const women = [];
-     
+
 //     for (const user of users ){
 //     if(!men.includes(user)) {
 //          women.push(user)
-//     } 
+//     }
 //     }
 //     return women
-     
+
 //   }
 // console.log(getWomen(users, men));
 
-
-  
-  // Task-4 - Масиви та рядки
+// Task-4 - Масиви та рядки
 // Напиши скрипт, який «розгортає» рядок (зворотний порядок літер) і виводить його в консоль.
 
 // const string = 'Welcome to the future';
 // const SEPARATOR = ''
 // const result = string.split(SEPARATOR).reverse().join(SEPARATOR)
 // console.log(result)
-
 
 // Task-5
 // Напиши скрипт який буде перевіряти чи елементи в масиві розташовані в порядку зростання,
@@ -431,8 +411,8 @@
 // const numbers = [1, 2, 3, 1, 5, 6, 1, 1, 9];
 // for (let i = 1; i < numbers.length; i+= 1) {
 //     const currentElement = numbers[i];
-//     const prevElement = numbers[i-1]; //від поточного взяти попереднє 
-    
+//     const prevElement = numbers[i-1]; //від поточного взяти попереднє
+
 //     // if (currentElement - prevElement !==1) {
 //     //     numbers[i] = prevElement + 1
 //     // }
@@ -443,7 +423,6 @@
 // }
 
 // console.log(numbers)
-
 
 // Task-6
 // Напиши функцію яка на основі масиву користувачів що поставили лайк формує та повертає рядок.
@@ -474,7 +453,7 @@
 //             case 3:
 //             result = `${arr[0]}, ${arr[1]} and ${arr[2]} like this`
 //             break;
-     
+
 //         default:
 //             result = `${arr[0]}, ${arr[1]} and ${arr.length - 2} 2 others like this`;
 //     }
@@ -485,8 +464,7 @@
 // console.log(createStr(["Peter"]));
 // console.log(createStr(["Jacob", "Alex"]));
 // console.log(createStr(["Max", "John", "Mark"]));
-// console.log(createStr(["Mark", "Alex", "Jacob", "Mark"]));   
-
+// console.log(createStr(["Mark", "Alex", "Jacob", "Mark"]));
 
 // ********************OBJECT******************** 3 ЗАНЯТТЯ
 
@@ -498,7 +476,7 @@
 // Функція має повертати сформований об'єкт з ключами name, price, quantity, totalPrice.
 
 // function createBasket(product, quantity, price) {
-    // const totalPrice = quantity* price
+// const totalPrice = quantity* price
 
 // const basket = {
 //     name: product,
@@ -522,9 +500,6 @@
 // console.log(createBasket("pizza", 3, 120));
 // console.log(createBasket('aplle', 13, 1200));
 
-
-
-
 // Task - 2
 // Створи функцію для ведення статистики комп'ютерного клубу. Функція приймає 1 параметр це об'єкт користувачів де ключ це ім'я користувача, а значення це час оренди у хвилинах.
 // Функція повертає рядок з інформацією про те скільки було користувачів та який середній час оренди комп'ютер.
@@ -540,14 +515,14 @@
 
 // function getTime(obj) {
 
-    // const countPlayers = Object.keys(obj)?.length // ? - оператор безпечного ченінгу, ми не потрапимо в помилку
-    // const values = Object.values(obj)
-    // let totalTime = 0;
-    
-    // for (const value of values) {
-    //     totalTime += value;
-    // }
-    //   return `Count of players ${countPlayers}, average time ${totalTime /countPlayers }`
+// const countPlayers = Object.keys(obj)?.length // ? - оператор безпечного ченінгу, ми не потрапимо в помилку
+// const values = Object.values(obj)
+// let totalTime = 0;
+
+// for (const value of values) {
+//     totalTime += value;
+// }
+//   return `Count of players ${countPlayers}, average time ${totalTime /countPlayers }`
 
 //     const entries = Object.entries(obj)
 //     let totalTime = 0;
@@ -559,8 +534,6 @@
 //   }
 
 // console.log(getTime(players));
-
-
 
 // Task - 3
 // 1 Створити функцію яка буде приймати 2 параметри
@@ -580,7 +553,7 @@
 //       age: 26,
 //     },
 //   ];
-  
+
 //   function getUsers(arr, bookName) {
 //     // let users = '';
 //     const users = []
@@ -598,7 +571,6 @@
 
 //   getUsers(friends, "Harry Potter")
 
-
 // function getTotalAge(arr) {
 //       let totalAge = 0;
 //       for (const user of arr) {
@@ -606,90 +578,87 @@
 //         // if (user.age) { // 0
 //         //   totalAge += user.age;
 //         // }
-    
+
 //         // // exp 2
 //         // console.log(user.name, user.hasOwnProperty('age'));
 //         // if(user.hasOwnProperty('age')){
 //         //     totalAge += user.age;
 //         // }
-    
+
 //         // // exp 3
 //         // console.log(user.name, 'age' in user);
 //         // if ("age" in user) {
 //         //   totalAge += user.age;
 //         // }
-    
+
 //         // console.log(user);
 //       }
 //       return totalAge;
 //     }
 //     console.log(getTotalAge(friends));
 
+// Task - 4
+// 1 Створити метод об'єкту який буде приймати 1 параметр назву факультету та повертати списoк імен учнів факультету
+// 2 Створити метод об'єкту який буде приймати 1 параметр назву факультету та повертати кількість очків факультету
 
+//   const hogvarts = {
+//     griffindor: [
+//       {
+//         name: "Harry",
+//         points: 17,
+//       },
+//       {
+//         name: "Hermiona",
+//         points: 19,
+//       },
+//       {
+//         name: "Ron",
+//         points: 14,
+//       },
+//     ],
+//     slizerin: [
+//       {
+//         name: "Draco",
+//         points: 17,
+//       },
+//       {
+//         name: "Goyl",
+//         points: 14,
+//       },
+//       {
+//         name: "Crabbe",
+//         points: 5,
+//       },
+//     ],
 
-  // Task - 4
-  // 1 Створити метод об'єкту який буде приймати 1 параметр назву факультету та повертати списoк імен учнів факультету
-  // 2 Створити метод об'єкту який буде приймати 1 параметр назву факультету та повертати кількість очків факультету
-  
-  const hogvarts = {
-    griffindor: [
-      {
-        name: "Harry",
-        points: 17,
-      },
-      {
-        name: "Hermiona",
-        points: 19,
-      },
-      {
-        name: "Ron",
-        points: 14,
-      },
-    ],
-    slizerin: [
-      {
-        name: "Draco",
-        points: 17,
-      },
-      {
-        name: "Goyl",
-        points: 14,
-      },
-      {
-        name: "Crabbe",
-        points: 5,
-      },
-    ],
+//======= 1=========
+// getUserList(faculty){
+//     if (!(faculty in this)){
+//         return 'Not found'
+//     }
+//     const students = []
 
-    //======= 1=========
-    // getUserList(faculty){
-    //     if (!(faculty in this)){
-    //         return 'Not found'
-    //     }
-    //     const students = []
+//     for (const student of this[faculty] ){
+//         students.push(student.name)
+//         }
+//         return students.join(', ')
+// }
 
-    //     for (const student of this[faculty] ){
-    //         students.push(student.name)
-    //         }
-    //         return students.join(', ')
-    // }
+// ========2 =========
 
-    // ========2 =========
+//     getTotalPoints(faculty){
+//         if (!this.hasOwnProperty(faculty)){
+//                     return 'Not found'
+//                 }
+//                 let totalPoints = 0;
+//                 for (const student of this[faculty]){
+//                     totalPoints += student.points
+//                 }
+//                 return totalPoints
+//     }
 
-    getTotalPoints(faculty){
-        if (!this.hasOwnProperty(faculty)){
-                    return 'Not found'
-                }
-                let totalPoints = 0;
-                for (const student of this[faculty]){
-                    totalPoints += student.points
-                }
-                return totalPoints
-    }
+// }
 
-}
-
-    
 // console.log(hogvarts.getUserList("griffindor"));
 // console.log(hogvarts.getUserList("qwerty"));
 // console.log(hogvarts.getUserList("slizerin"));
@@ -699,49 +668,176 @@
 // console.log(hogvarts.getTotalPoints("slizerin"));
 // console.log(hogvarts.getTotalPoints("slitherin"));
 
-    
-  
-  // console.log(hogvarts.getUserList("griffindor"));
-  // console.log(hogvarts.getUserList("qwerty"));
-  // console.log(hogvarts.getUserList("slizerin"));
-  // console.log(hogvarts.getUserList('slitherin'));
-  
-  // console.log(hogvarts.getTotalPoints("griffindor"));
-  // console.log(hogvarts.getTotalPoints("slizerin"));
-  // console.log(hogvarts.getTotalPoints("slitherin"));
-  
-  // function findLongestWord(string) {
-  //   // Change code below this line
-  //   const words = string.split(" ");
-  //   let longestWord = words[0];
-  //   const allWords = [];
-  
-  //   for (const word of words) {
-  //     if (word.length > longestWord.length) {
-  //       longestWord = word;
-  //     }
-  //   }
-  
-  //   for (const word of words) {
-  //     if (word.length === longestWord.length) {
-  //       allWords.push(word);
-  //     }
-  //   }
-  //   return allWords;
-  //   // Change code above this line
-  // }
-  
-  // console.log(findLongestWord("and Google do a HElllO roll WOORLD"));
-  
-  
+// console.log(hogvarts.getUserList("griffindor"));
+// console.log(hogvarts.getUserList("qwerty"));
+// console.log(hogvarts.getUserList("slizerin"));
+// console.log(hogvarts.getUserList('slitherin'));
+
+// console.log(hogvarts.getTotalPoints("griffindor"));
+// console.log(hogvarts.getTotalPoints("slizerin"));
+// console.log(hogvarts.getTotalPoints("slitherin"));
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//   const words = string.split(" ");
+//   let longestWord = words[0];
+//   const allWords = [];
+
+//   for (const word of words) {
+//     if (word.length > longestWord.length) {
+//       longestWord = word;
+//     }
+//   }
+
+//   for (const word of words) {
+//     if (word.length === longestWord.length) {
+//       allWords.push(word);
+//     }
+//   }
+//   return allWords;
+//   // Change code above this line
+// }
+
+// console.log(findLongestWord("and Google do a HElllO roll WOORLD"));
+
 //   const a = {
 //       name: 'a'
 //   }
-  
+
 //   const b = a;
 //   console.log(b === a);
-  
+
 //   const c = Object.create(a)
-  
-  
+
 //   console.log(c === a);
+
+//========================= Деструктуризація, REST, SPREAD ====================
+
+// *************************БЕЗ Деструктуризація об'єкта в циклі***********************************\\
+
+const users = [{ name: 'Kate' }, { name: 'Alex' }, { name: 'Mark' }];
+
+// const names = []
+
+// for (const user of users) {
+//     names.push(user.name)
+//     console.log(user)
+// }
+
+// console.log(names)
+
+// ************************* З Деструктуризація об'єкта в циклі***********************************\\
+
+// const names = []
+
+// for (const {name : userName = 'Name not found '} of users) {
+//     names.push(userName)
+
+// }
+
+// *************************Операція rest та spread********************************\\
+
+// const numbers = [1, 2, 3];
+// const copy = [...numbers]; //spread -  з одного масиву, об єкту в інший
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const [,,first,second, third, ...args] = numbers; // rest, якщо потрібно деструктурузувати щось і забрати щсь одне з масиву, а все інше потрібно зібрати в масив
+//  console.log(numbers)
+//  console.log(args)
+
+// ************Операція rest та spread в функціях********************************\\
+
+// const numbers = [1, 2, 3];
+
+// function foo(...props){//rest // [1,2,3]
+// console.log(props);
+
+// }
+// foo(...numbers)// spread під капотом буде передавати колекцію значень
+
+// const names = ['Alice', 'Kate', 'Emma'];
+
+// function foo(first, second, third) {
+//     console.log('first', first);
+//     console.log('second', second);
+//     console.log('third', third);
+// }
+
+// foo(...names) // foo('Alice', 'Kate', 'Emma')// spread
+
+// function foo(first, second, ...args) { //rest
+//     console.log(first);
+//     console.log(second);
+//     console.log(args);
+// }
+
+// foo('Alice', 'Kate', 'Emma', 'Mia', 'Lily')
+
+// ================Працюємо з об єктом-----------
+
+// const user = {
+//     name: 'Test name',
+//     age: 22,
+//     city: 'Lviv',
+//     skills: {
+//         html: true,
+//         css: false,
+//         js: true
+//     },
+//     car: 'Audi'
+// }
+
+// function foo({ name, skills: { html, ...props }, ...props2}) {
+//     console.log(name);
+//     console.log(html);
+//     console.log(props);
+//     console.log(props2);
+// }
+// foo(user)
+
+// Task - 1 - Деструктуризація
+// Деструктуризуй об'єкт таким чином щоб отримати значення name, surname, username
+
+// const user = {
+//   id: 1,
+//   username: "harry_potter",
+//   profile: {
+//     name: "Harry",
+//     surname: "Potter",
+//     age: 25,
+//   },
+// };
+
+// const { username, profile, profile: { name, surname} } = user
+
+// console.log(username);
+// console.log(profile);
+// console.log(name);
+// console.log(surname);
+
+// Task - 2 Деструктуризація
+// Допиши функцію таким чином щоб кожна властивість об'єкта product була незалежним параметром
+
+// const product = {
+//   name: "Smart TV",
+//   price: 25000,
+//   category: "Electronics",
+//   details: {
+//     brand: "Samsung",
+//     color: "Black",
+//     weight: "15.5",
+//   },
+// };
+
+// function displayProductInfo ({ name, price, category,  details: { brand, color, weight } = {}, } = {}) {
+//     console.log(`Назва товару: ${name}`);
+//       console.log(`Ціна: ${price} грн`);
+//       console.log(`Категорія: ${category}`);
+//       console.log("Деталі:");
+//       console.log(`- Бренд: ${brand}`);
+//       console.log(`- Колір: ${color}`);
+//       console.log(`- Вага: ${weight} кг`);
+
+// }
+
+// displayProductInfo(product);
