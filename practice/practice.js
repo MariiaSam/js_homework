@@ -715,7 +715,7 @@
 
 // *************************БЕЗ Деструктуризація об'єкта в циклі***********************************\\
 
-const users = [{ name: 'Kate' }, { name: 'Alex' }, { name: 'Mark' }];
+// const users = [{ name: 'Kate' }, { name: 'Alex' }, { name: 'Mark' }];
 
 // const names = []
 
@@ -1245,3 +1245,238 @@ const users = [{ name: 'Kate' }, { name: 'Alex' }, { name: 'Mark' }];
 // console.log(singl.getElem(20));
 // console.log(singl.getElem(30));
 // console.log(singl.getElem(40))
+
+
+//========================ПЕРЕБИРАЮЧІ МЕТОДИ МАСИВУ 4.2==============
+
+// Тестовий масив для теоретичного блоку
+
+// const users = [
+//   { id: 1, name: "John", age: 28, skills: ["JavaScript", "HTML", "CSS"] },
+//   { id: 2, name: "Alice", age: 32, skills: ["Python", "Data Analysis"] },
+//   { id: 3, name: "Bob", age: 24, skills: ["JavaScript", "React", "Node.js"] },
+//   { id: 4, name: "Emily", age: 40, skills: ["Java", "Spring"] },
+//   { id: 5, name: "David", age: 22, skills: ["C++", "C#"] },
+// ];
+// console.log(users);
+
+// ==========================MAP========================
+// const names = []
+// for (const user of users) {
+//     names.push(user.name)
+// }
+// console.log(names) 
+
+// const names = users.map(function(){
+// }) 
+// Поверне масив тaкої довжини, якої був, що буде входити в нього, потрібно розписати в коллбук ф-цію
+// const names = users.map((user) => user.name) 
+// console.log(names)
+
+// const names = users.map(({name}) => name) 
+// console.log(names)
+
+
+// ********flatMap******** \\
+// const numbers = [[1], [2], [3, [4]]]; => [1,2,3]
+
+// для двох трьох вимірних масивів, щоб розгладити масив
+
+// const skills = users.flatMap((user) =>user.skills)
+// console.log(skills)
+
+// const arr1 = [0, 1, 2, [3, [4, [45]]]];
+
+// const res = arr1.flatMap(item => item)
+// console.log(res)
+
+
+// ********flat******** \\
+
+// повертає масив, і не примймає коллбeк функцію, а приймає глубину, яку ми хочемо розгорнути 
+
+// const arr = [0, 1, 2, [3, [4, [45]]]];
+
+// // const res = arr.flat(3)
+// // console.log(res)
+
+// function findDepth(arr) {
+//     let depth = 0
+
+//     for (const item of arr) {
+//     if (Array.isArray(item)) {
+//         depth += 1
+//         depth += findDepth(item)
+//         }
+//     }
+//     return depth
+
+// }
+// console.log(findDepth(arr))
+ 
+
+
+// ********filter******** \\
+
+//відібрати певну кільсть елементів по певному критерію,  повертає повністю елемент ітерації
+
+// const users = [
+//   { id: 1, name: "John", age: 28, skills: ["JavaScript", "HTML", "CSS"] },
+//   { id: 2, name: "Alice", age: 32, skills: ["Python", "Data Analysis"] },
+//   { id: 3, name: "Bob", age: 24, skills: ["JavaScript", "React", "Node.js"] },
+//   { id: 4, name: "Emily", age: 40, skills: ["Java", "Spring"] },
+//   { id: 5, name: "David", age: 22, skills: ["C++", "C#"] },
+// ];
+
+// const res = users.filter(user => user.age > 30) //  user.age > 30, якщо умова TRUE, то він забирає  елемент ітерації повністю, тобто наш об"єкт, якщо False => filter ігнорує і йде далі, якщо повністю не задовольняються умови, то повертається порожній масив
+
+// const res = users.filter(({age}) => age >= 40) //  з деструкт
+
+// const res = users.filter(({skills}) => skills.includes('JavaScript')) 
+// console.log(res)
+
+
+// ********find******** \\
+
+// бере лише перший елемент, який задовольняє умову, поверне НЕ МАСИВ, а ЕЛЕМЕНТ ітерації
+
+// const res = users.find(({skills}) => skills.includes('JavaScript'))
+// console.log(res)
+
+
+// ********findIndex********\\
+
+// Повертає індекс елемента, який задовольняє нашу умову
+
+// const arr = [4, 5, 63, 4];
+// console.log(arr.indexOf(4)); 
+
+// const users = [
+//   { id: 1, name: "John", age: 28, skills: ["JavaScript", "HTML", "CSS"] },
+//   { id: 2, name: "Alice", age: 32, skills: ["Python", "Data Analysis"] },
+//   { id: 3, name: "Bob", age: 24, skills: ["JavaScript", "React", "Node.js"] },
+//   { id: 4, name: "Emily", age: 40, skills: ["Java", "Spring"] },
+//   { id: 5, name: "David", age: 22, skills: ["C++", "C#"] },
+// ];
+
+// const idx = users.findIndex(({id}) =>id ===3)
+// console.log(idx)// якщо немає такого елемента, то поверне -1;
+  
+// ********every********\\
+// повертає ТРУ, якщо хоча ВСІ елементи задовольняють нашу умову
+
+//
+// const users = [
+//     { id: 1, name: "John", age: 28, skills: ["JavaScript", "HTML", "CSS"] },
+//     { id: 2, name: "Alice", age: 32, skills: ["Python", "Data Analysis"] },
+//     { id: 3, name: "Bob", age: 24, skills: ["JavaScript", "React", "Node.js"] },
+//     { id: 4, name: "Emily", age: 40, skills: ["Java", "Spring"] },
+//     { id: 5, name: "David", age: 22, skills: ["C++", "C#"] },
+//   ];
+// const isKnow = users.every(({skills}) => skills.includes("Python"))
+// console.log(isKnow);
+
+// const isAdult = users.every(({age}) => age >= 18)
+// console.log(isAdult);
+
+
+// ********some********\\
+// повертає ТРУ, якщо хоча б один елемен задовольняє нашу умову
+// const users = [
+//   { id: 1, name: "John", age: 28, skills: ["JavaScript", "HTML", "CSS"] },
+//   { id: 2, name: "Alice", age: 32, skills: ["Python", "Data Analysis"] },
+//   { id: 3, name: "Bob", age: 24, skills: ["JavaScript", "React", "Node.js"] },
+//   { id: 4, name: "Emily", age: 40, skills: ["Java", "Spring"] },
+//   { id: 5, name: "David", age: 22, skills: ["C++", "C#"] },
+// ];
+
+// const isKnow = users.some(({skills})=> skills.includes("Python"))
+// console.log(isKnow)
+
+// ********sort********\\
+
+// Мутуючий метод, не варто використ дестр
+
+// const users = [
+//   { id: 1, name: "John", age: 28, skills: ["JavaScript", "HTML", "CSS"] },
+//   { id: 2, name: "Alice", age: 32, skills: ["Python", "Data Analysis"] },
+//   { id: 3, name: "Bob", age: 24, skills: ["JavaScript", "React", "Node.js"] },
+//   { id: 4, name: "Emily", age: 40, skills: ["Java", "Spring"] },
+//   { id: 6, name: "alice", age: 32, skills: ["Python", "Data Analysis"] },
+//   { id: 5, name: "David", age: 22, skills: ["C++", "C#"] },
+// ];
+
+// const res = users.sort((a, b) => a.age - b.age)
+// console.log(res)
+
+// якщо сортуємо по рядкам, то використвоуєм метод localeCompare
+// const res = users.sort((a, b) => a.name.localeCompare(b.name))
+// console.log(res)
+
+
+// const numb = [1, 2, 4, 6, 7, 8, 11, 12, 4]
+// // console.log(numb.sort())
+
+// console.log(numb.sort((current,next) => current - next));
+
+
+// ********reduce********\\
+//  Може повертати рядки, масиви, числи, об"єкти, булі
+// Обов_acc -аккамулятор НАШЕ ПОЧАТКОВЕ ЗНАЧЕННЯ, item - ітеруємий елемент
+// в reduce завжди хочемо повернути значення аккамулятора
+
+
+// const users = [
+//     { id: 1, name: "John", age: 28, skills: ["JavaScript", "HTML", "CSS"] },
+//     { id: 2, name: "Alice", age: 32, skills: ["Python", "Data Analysis"] },
+//     { id: 3, name: "Bob", age: 24, skills: ["JavaScript", "React", "Node.js"] },
+//     { id: 4, name: "Emily", age: 40, skills: ["Java", "Spring"] },
+//     { id: 6, name: "alice", age: 32, skills: ["Python", "Data Analysis"] },
+//     { id: 5, name: "David", age: 22, skills: ["C++", "C#"] },
+//   ];
+
+//   //  const res = users.reduce(() =>{}, '')
+//   // const res = users.reduce(() =>{}, {})
+//     // const res = users.reduce(() =>{}, [])
+// //   const res = users.reduce((acc, item) => {
+// //     return acc + item.age
+// // }, 0) // останнє значення записується, як результат
+
+
+// const names = users.reduce((acc, {name, age}) => {
+//     if (age >= 30) {
+//    acc.push(name)  
+//     }
+   
+//     return acc
+// },[])
+// console.log(names)
+
+// ===================================ПРАКТИКА================
+
+// Task-1
+// Напишіть функцію, яка використовує метод map, щоб створити новий масив об'єктів, в якому буде інформація про середній бал кожного студента.
+
+const students = [
+  { name: "John", grades: [80, 85, 90] }, //  { name: "John", average: 85 }
+  { name: "Alice", grades: [90, 95, 92] },
+  { name: "Bob", grades: [70, 80, 75] },
+  { name: "Emily", grades: [95, 92, 88] },
+  { name: "David", grades: [85, 88, 90] },
+];
+
+function getAverage(arr) {
+  const res =  arr.map(({name, grades}) => {
+    const total = grades.reduce((acc, item) => acc + item)
+    console.log(total)
+
+    return {
+    name, 
+    averge: Math.round(total/grades.length)
+
+}
+}) 
+ return XPathResult;   
+}
+
+console.log(getAverage(students))
