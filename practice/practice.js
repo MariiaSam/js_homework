@@ -1984,3 +1984,198 @@
 // console.log(calculator);
 // console.log(calculator.add());
 // console.log(calculator.mult());
+
+
+//================================CLASS 5.2==================
+
+// null - є кінцем і початком всіх прототипів
+
+// const user = {
+//   name: "Alice",
+//   age: 23,
+//   sayHello() {
+//     console.log(`Hello my name is ${this.name}`);
+//   },
+//   getAge() {
+//     console.log(`my age ${this.age}`);
+//   },
+// };
+// console.log(user);
+
+// const student = Object.create(user);
+
+// console.log(student);
+// student.sayHello()
+
+// student.name = 'kate'
+// console.log(student)
+// student.sayHello()
+
+// const teacher = Object.create(student)
+// teacher.city = "Lviv"
+// teacher.sayHello()
+
+
+// function sayHello (userName) {
+//       console.log(`Hello my name is ${userName}`);
+// }
+// String.prototype.say = sayHello
+
+
+// String.prototype.replace = function (userName) {
+//   console.log(`Hello my name is ${userName}`);
+// };
+
+// const str = "test";
+// str.say('JS')
+
+// const str1 = "test2"
+
+// str.replace("JS");
+// str1.replace('Artem');
+
+// *********************************ES6 Class*********************************\\
+
+// *****Публічні властивості та методи***** \\
+// class User {
+//     constructor(userName) {
+//         this.name = userName;
+//     }
+
+//     showName() {
+//         console.log(`Hello my name is ${this.name}`);// методи бутипоміщенні тільки прототип
+//     }
+// }
+
+// const student = new User('Alice'); // ексземпляр класу
+// const student1 = new User('Kate');
+// console.log(student);
+// console.log(student1);
+// student.showName()
+
+
+// *****Приватні властивості та методи***** \\
+// class User {
+//     #password;
+//     constructor(name, password) {
+//         this.name = name;
+//         this.#password = password;
+//     }
+
+//     showName() {
+//         if (this.#checkPassword()) {
+//             console.log(`Hello my name is ${this.name}`);
+//         } else {
+//             console.log("Who are you ?🧐");
+//         }
+//     }
+
+//     #checkPassword() {
+//         const password = prompt();
+//         return password === this.#password;
+//     }
+// }
+
+// const student = new User('Alice', 'qwerty111');
+// // student.password = 'abcd'
+// console.log(student);
+// student.showName()
+
+// ******Геттери і сеттери****** \\
+
+// class User {
+//     #password;
+//     #email;
+//     constructor(name, password, email) {
+//         this.name = name;
+//         this.#password = password;
+//         this.#email = email;
+//     }
+
+//     showName() {
+//         if (this.#checkPassword()) {
+//             console.log(`Hello my name is ${this.name}`);
+//         } else {
+//             console.log("Who are you ?🧐");
+//         }
+//     }
+
+//     #checkPassword() {
+//         const password = prompt();
+//         return password === this.#password;
+//     }
+
+//     get email() {
+//         if (this.#checkPassword()) {
+//             return this.#email
+//         }
+//     }
+
+//     set email(newEmail) {
+//         if (this.#checkPassword()) {
+//             this.#email = newEmail;
+//         }
+//     }
+// }
+
+// const student = new User('Alice', 'qwerty111', 'test@gmail.com');
+// console.log(student.email);
+// student.email = 'new@gmail.com';
+
+
+// **********Наслідування класів********* \\
+
+// class User {
+//   #password;
+//   #email;
+//   constructor(name, password, email) {
+//     this.name = name;
+//     this.#password = password;
+//     this.#email = email;
+//   }
+
+//   showName() {
+//     if (this.#checkPassword()) {
+//       console.log(`Hello my name is ${this.name}`);
+//     } else {
+//       console.log("Who are you ?🧐");
+//     }
+//   }
+
+//   #checkPassword() {
+//     const password = prompt();
+//     return password === this.#password;
+//   }
+
+//   get email() {
+//     if (this.#checkPassword()) {
+//       return this.#email;
+//     }
+//   }
+
+//   set email(newEmail) {
+//     if (this.#checkPassword()) {
+//       this.#email = newEmail;
+//     }
+//   }
+// }
+// constructor(name, password, email) {
+//     this.name = name;
+//     this.#password = password;
+//     this.#email = email;
+// }
+// class Student extends User {
+//     constructor(name, password, email, points) {
+//         super(name, password, email) // метод super() викликає батьківський конструктор
+//         // super()
+//         this.points = points;
+//     }
+//     getPoints() {
+//         console.log(`${this.name} has ${this.points} points`);
+//     }
+// }
+
+// const student = new Student('Alice', 'qwerty111', 'test@gmail.com', 38);
+// // student.showName()
+// // student.getPoints()
+// console.log(student); 
