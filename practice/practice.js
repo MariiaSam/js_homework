@@ -2328,45 +2328,45 @@
 // Необхідно створити клас BankAccount, який представляє банківський рахунок. Клас повинен мати приватну властивість balance, яка представляє баланс рахунку. Клас повинен також мати публічні методи deposit та withdraw, які дозволяють здійснювати операції з депозитом та зняттям коштів з рахунку. При цьому balance повинна бути доступна лише в межах класу BankAccount та його приватних методів.
 
 
-class BankAccount {
-    #balance
-    constructor(){
-    this.#balance = 0
-    }
+// class BankAccount {
+//     #balance
+//     constructor(){
+//     this.#balance = 0
+//     }
 
-    deposit(amount) {
-    if (amount <= 0){
-        console.log("Сума має бути більша за НУЛЬ");
-        return
-    } 
+//     deposit(amount) {
+//     if (amount <= 0){
+//         console.log("Сума має бути більша за НУЛЬ");
+//         return
+//     } 
 
-    this.#changeBalance(amount);
-    console.log(`Здійснено депозит ${amount}`);
-    }
+//     this.#changeBalance(amount);
+//     console.log(`Здійснено депозит ${amount}`);
+//     }
 
-    withdraw(amount){
-        if (amount <= 0) {
-            console.log("Сума має бути більша за НУЛЬ");
-        } else if(amount > this.#balance){
-            console.log("Недостатньо коштів на рахунку");
+//     withdraw(amount){
+//         if (amount <= 0) {
+//             console.log("Сума має бути більша за НУЛЬ");
+//         } else if(amount > this.#balance){
+//             console.log("Недостатньо коштів на рахунку");
 
-        } else {
-        this.#changeBalance(-amount) 
-        console.log(`Знято ${amount}`);
-    }
+//         } else {
+//         this.#changeBalance(-amount) 
+//         console.log(`Знято ${amount}`);
+//     }
 
-    }
-
-
-    #changeBalance(amount) {
-        this.#balance += amount
-    }
+//     }
 
 
-}
+//     #changeBalance(amount) {
+//         this.#balance += amount
+//     }
 
-const instance = new BankAccount();
-instance.deposit(100);
-instance.deposit(1200);
-instance.withdraw(100);
-console.log(instance);
+
+// }
+
+// const instance = new BankAccount();
+// instance.deposit(100);
+// instance.deposit(1200);
+// instance.withdraw(100);
+// console.log(instance);
